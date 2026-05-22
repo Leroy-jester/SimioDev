@@ -68,6 +68,77 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Courses Preview */}
+      <section className="courses">
+        <div className="container">
+          <div className="section-title">
+            <h2>Nossos Cursos Destacados</h2>
+            <p>Escolha o caminho que melhor se adapta aos seus objetivos</p>
+          </div>
+          <div className="course-slider">
+            {/* HTML Course */}
+            <div className="course-card">
+              <div className="course-image">
+                <img src="https://via.placeholder.com/400x200?html5" alt="HTML5 Course" />
+              </div>
+              <div className="course-content">
+                <h3>HTML5 Semântico e Acessível</h3>
+                <p>Aprenda a estruturar páginas web modernas com as melhores práticas de semântica e acessibilidade</p>
+              </div>
+              <div className="course-footer">
+                <span className="course-price">R$ 99,90</span>
+                <a href="/cursos" className="btn btn-outline">Ver Detalhes</a>
+              </div>
+            </div>
+
+            {/* CSS Course */}
+            <div className="course-card">
+              <div className="course-image">
+                <img src="https://via.placeholder.com/400x200?css3" alt="CSS3 Course" />
+              </div>
+              <div className="course-content">
+                <h3>CSS3 Avançado: Flexbox, Grid & Animações</h3>
+                <p>Domine técnicas modernas de estilização para criar layouts responsivos e efeitos visuais impressionantes</p>
+              </div>
+              <div className="course-footer">
+                <span className="course-price">R$ 99,90</span>
+                <a href="/cursos" className="btn btn-outline">Ver Detalhes</a>
+              </div>
+            </div>
+
+            {/* JavaScript Course */}
+            <div className="course-card">
+              <div className="course-image">
+                <img src="https://via.placeholder.com/400x200?javascript" alt="JavaScript Course" />
+              </div>
+              <div className="course-content">
+                <h3>JavaScript Moderno: ES6+ & DOM Manipulation</h3>
+                <p>Aprenda a criar aplicações interativas e dinâmicas com o linguagem mais utilizada da web</p>
+              </div>
+              <div className="course-footer">
+                <span className="course-price">R$ 149,90</span>
+                <a href="/cursos" className="btn btn-outline">Ver Detalhes</a>
+              </div>
+            </div>
+
+            {/* Full Stack Course */}
+            <div className="course-card">
+              <div className="course-image">
+                <img src="https://via.placeholder.com/400x200?fullstack" alt="Full Stack Course" />
+              </div>
+              <div className="course-content">
+                <h3>Curso Completo: HTML, CSS & JavaScript</h3>
+                <p>O pacote definitivo para se tornar um desenvolvedor web completo do zero ao avançado</p>
+              </div>
+              <div className="course-footer">
+                <span className="course-price">R$ 299,90</span>
+                <a href="/cursos" className="btn btn-outline">Ver Detalhes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
