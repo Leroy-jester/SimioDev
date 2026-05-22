@@ -36,6 +36,38 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Features Section */}
+      <section className="features">
+        <div className="container">
+          <div className="section-title">
+            <h2>Por Que Escolher o SimioDev?</h2>
+            <p>Nosso método único combina teoria sólida com prática intensiva para garantir seu sucesso</p>
+          </div>
+          <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon">📚</div>
+              <h3>Aprendizado Estruturado</h3>
+              <p>Cursos organizados em módulos progressivos que guiam seu desenvolvimento do básico ao avançado</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">💻</div>
+              <h3>Projetos Reais</h3>
+              <p>Aprenda construindo projetos do portfólio que você pode mostrar para recrutadores</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🎯</div>
+              <h3>Foco em Carreira</h3>
+              <p>Preparação específica para o mercado de trabalho com dicas de entrevistas e portfólio</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🤝</div>
+              <h3>Comunidade Ativa</h3>
+              <p>Acesse nossa comunidade exclusiva para tirar dúvidas e networkear com outros desenvolvedores</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
