@@ -68,6 +68,36 @@ const Cursos = () => {
           </div>
         </div>
       </section>
+
+      <section className="features" style={{ padding: '5rem 0', background: 'var(--light)' }}>
+        <div className="container">
+          <div className="section-title" style={{ marginBottom: '3rem' }}>
+            <h2>Por Que Nossos Cursos São Diferentes?</h2>
+          </div>
+          <div className="features-grid" style={{ gap: '2rem' }}>
+            <div className="feature-card" style={{ textAlign: 'left' }}>
+              <div className="feature-icon">🎯</div>
+              <h3>Aprendizado Prático</h3>
+              <p>Cada módulo inclui projetos reais que você pode adicionar ao seu portfólio imediatamente</p>
+            </div>
+            <div className="feature-card" style={{ textAlign: 'left' }}>
+              <div className="feature-icon">📚</div>
+              <h3>Material Atualizado</h3>
+              <p>Conteúdo constantemente revisado com as últimas tecnologias e melhores práticas do mercado</p>
+            </div>
+            <div className="feature-card" style={{ textAlign: 'left' }}>
+              <div className="feature-icon">💬</div>
+              <h3>Suporte Dedicado</h3>
+              <p>Equipe de mentores disponível para tirar dúvidas e revisar seus códigos</p>
+            </div>
+            <div className="feature-card" style={{ textAlign: 'left' }}>
+              <div className="feature-icon">🚀</div>
+              <h3>Carreira Acelerada</h3>
+              <p>Orientação de carreira, revisão de currículo e preparação para entrevistas técnicas</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
