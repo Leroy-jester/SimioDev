@@ -77,6 +77,21 @@ const Home = () => {
             <p>Escolha o caminho que melhor se adapta aos seus objetivos</p>
           </div>
           <div className="course-slider">
+            {/* HTML Course */}
+            <div className="course-card">
+              <div className="course-image">
+                <img src="https://via.placeholder.com/400x200?html5" alt="HTML5 Course" />
+              </div>
+              <div className="course-content">
+                <h3>HTML5 Semântico e Acessível</h3>
+                <p>Aprenda a estruturar páginas web modernas com as melhores práticas de semântica e acessibilidade</p>
+              </div>
+              <div className="course-footer">
+                <span className="course-price">R$ 99,90</span>
+                <a href="/cursos" className="btn btn-outline">Ver Detalhes</a>
+              </div>
+            </div>
+
             
           </div>
         </div>
