@@ -1,0 +1,37 @@
+/* pages/Home/Home.css */
+
+.hero {
+  min-height: 100vh;
+  background: var(--gradient-primary);
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.stats {
+  padding: 5rem 0;
+  background: white;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 2rem;
+}

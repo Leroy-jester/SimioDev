@@ -1,3 +1,4 @@
+import './cursos.css'
 const Cursos = () => {
   return (
     <>
