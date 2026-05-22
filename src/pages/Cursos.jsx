@@ -98,6 +98,14 @@ const Cursos = () => {
           </div>
         </div>
       </section>
+
+      <section className="cta">
+        <div className="container">
+          <h2>Pronto para Começar?</h2>
+          <p>Seu futuro como desenvolvedor web começa aqui. Escolha seu curso e transforme sua carreira.</p>
+          <a href="#" className="btn btn-primary">Começar Agora</a>
+        </div>
+      </section>
     </>
   );
 };
