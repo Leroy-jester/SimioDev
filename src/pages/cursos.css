@@ -15,6 +15,7 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
+  margin: 10px;
 }
 
 .course-image img {

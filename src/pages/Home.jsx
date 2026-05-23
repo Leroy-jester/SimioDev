@@ -1,7 +1,27 @@
 import './home.css'
+import './cursos.css'
+import CSS3 from '../assets/CSS3.png'
+import HTML5 from '../assets/HTML5.png'
+import JS from '../assets/javascript.png'
+import fullstack from '../assets/FullStack2.png'
+import { YoutubeVideo } from '../components/Youtube'
+
 const Home = () => {
   return (
     <>
+
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-content">
+          <h1>Aprenda Programação do Zero ao Avançado</h1>
+          <p>Domine HTML, CSS e JavaScript com projetos práticos e torne-se um desenvolvedor web completo</p>
+          <YoutubeVideo videoId="AD7eifiEiJ8"/>
+          <div className="hero-buttons">
+            <a href="/cursos" className="btn btn-primary">Começar Agora</a>
+            <a href="/sobre" className="btn btn-outline">Saiba Mais</a>
+          </div>
+        </div>
+      </section>
 
       {/* Stats Section */}
       <section className="stats">
@@ -70,7 +90,7 @@ const Home = () => {
             {/* HTML Course */}
             <div className="course-card">
               <div className="course-image">
-                <img src="https://via.placeholder.com/400x200?html5" alt="HTML5 Course" />
+                <img src={HTML5} alt="HTML5 Course" />
               </div>
               <div className="course-content">
                 <h3>HTML5 Semântico e Acessível</h3>
@@ -85,7 +105,7 @@ const Home = () => {
             {/* CSS Course */}
             <div className="course-card">
               <div className="course-image">
-                <img src="https://via.placeholder.com/400x200?css3" alt="CSS3 Course" />
+                <img src={CSS3} alt="CSS3 Course" />
               </div>
               <div className="course-content">
                 <h3>CSS3 Avançado: Flexbox, Grid & Animações</h3>
@@ -100,7 +120,7 @@ const Home = () => {
             {/* JavaScript Course */}
             <div className="course-card">
               <div className="course-image">
-                <img src="https://via.placeholder.com/400x200?javascript" alt="JavaScript Course" />
+                <img src={JS} alt="JavaScript Course" />
               </div>
               <div className="course-content">
                 <h3>JavaScript Moderno: ES6+ & DOM Manipulation</h3>
@@ -115,7 +135,7 @@ const Home = () => {
             {/* Full Stack Course */}
             <div className="course-card">
               <div className="course-image">
-                <img src="https://via.placeholder.com/400x200?fullstack" alt="Full Stack Course" />
+                <img src={fullstack} alt="Full Stack Course" />
               </div>
               <div className="course-content">
                 <h3>Curso Completo: HTML, CSS & JavaScript</h3>
