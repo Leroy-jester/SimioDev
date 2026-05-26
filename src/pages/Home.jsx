@@ -13,7 +13,7 @@ const Home = () => {
       <section className="hero">
         <div className="hero-content">
           <h1>Aprenda Programação do Zero ao Avançado</h1>
-          <YoutubeVideo videoId="AAAAAAAAAAA"/>
+          <YoutubeVideo videoId="dQw4w9WgXcQ"/>
           <p>Domine HTML, CSS e JavaScript com projetos práticos e torne-se um desenvolvedor web completo</p>
           <div className="hero-buttons">
             <a href="/cursos" className="btn btn-primary">Começar Agora</a>
