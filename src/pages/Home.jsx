@@ -4,7 +4,7 @@ import STOCKIMAGE from '../assets/stockImage.jpg'
 import josef from '../assets/josef.png'
 import george from '../assets/george.jpg'
 import { WhatsAppButton } from '../components/Whatssap'
-import videoApresentacao from '../assets/'
+import videoApresentacao from '../assets/vedeo.mp4'
 
 const Home = () => {
 
