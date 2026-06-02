@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="footer-content">
 
           <div className="footer-logo">
-            <div className="logo-icon">S</div>
-            <span>SimioDev</span>
+            <div className="logo-icon">L</div>
+            <span>Lorem Ipsum</span>
           </div>
 
           <div className="footer-links">
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 SimioDev. Todos os direitos reservados.</p>
+          <p>© 2026 Lorem Ipsum. Todos os direitos reservados.</p>
           <p>Feito com ❤️ para desenvolvedores</p>
         </div>
 

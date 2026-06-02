@@ -1,18 +1,58 @@
+import { useEffect, useState } from 'react'
 import './home.css'
 import STOCKIMAGE from '../assets/stockImage.jpg'
+import josef from '../assets/josef.png'
+import george from '../assets/george.jpg'
 import { YoutubeVideo } from '../components/Youtube'
+import { WhatsAppButton } from '../components/Whatssap'
+import videoApresentacao from '../assets/vedeo.mp4'
 
 const Home = () => {
+
+  const [diasGarantia, setDiasGarantia] = useState(7)
+  const [videoStarted, setVideoStarted] = useState(false);
+  const [videoFinished, setVideoFinished] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDiasGarantia((dias) => dias + 1)
+    }, 1000)
+
+    return () => clearInterval(interval)
+  }, [])
+  
+  // useEffect(() => {
+  // document.body.style.overflow = videoFinished ? 'auto' : 'hidden'
+
+  // return () => {
+  //   document.body.style.overflow = 'auto'
+  // }
+  // }, [videoFinished])
+
   return (
     <>
+
+      {videoStarted && !videoFinished && (
+        <div className="page-lock">
+          <div className="lock-message">
+            <h2>Assista ao vídeo até o final</h2>
+            <p>O restante do conteúdo será liberado automaticamente.</p>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
           <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <YoutubeVideo videoId="dQw4w9WgXcQ"/>
-          
+          <video
+            controls
+            onPlay={() => setVideoStarted(true)}
+            onEnded={() => setVideoFinished(true)}
+          >
+            <source src={videoApresentacao} type="video/mp4" />
+          </video>
           <div className="hero-buttons">
             <a href="/" className="btn btn-primary">Começar Agora</a>
             <a href="/" className="btn btn-outline">Saiba Mais</a>
@@ -206,6 +246,99 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Dono Section */}
+
+      <section className="about-author">
+        <div className="container">
+          <div className="author-wrapper">
+
+            <div className="author-image">
+              <img src={STOCKIMAGE} alt="Equipe" />
+            </div>
+
+            <div className="author-content">
+              <span className="author-tag">
+                QUEM ESTÁ POR TRÁS DO PROJETO
+              </span>
+    
+              <h2>Equipe Lorem</h2>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ipsam magni cumque. Atque vero autem voluptates dolorum magnam asperiores fugiat id. Quas ipsam ea voluptates sed sunt assumenda recusandae? Sapiente.
+              </p>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laudantium beatae vitae quis possimus provident porro consequuntur obcaecati explicabo perspiciatis quas, repellat tempora exercitationem consequatur itaque saepe dignissimos velit. Voluptatum.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* faq Section */}
+      <section className="faq">
+        <div className="container">
+
+          <div className="section-title">
+            <h2>Dúvidas Frequentes</h2>
+            <p>
+              Encontre respostas para as perguntas mais comuns sobre nossa solução.
+            </p>
+          </div>
+
+          <div className="faq-container">
+
+            <div className="faq-item">
+              <h3>❓ Como funciona o Lorem Ipsum?</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, molestias.
+              </p>
+            </div>
+
+            <div className="faq-item">
+              <h3>❓ Preciso instalar algum programa?</h3>
+              <p>
+                Não. A plataforma funciona diretamente pelo navegador.
+              </p>
+            </div>
+
+            <div className="faq-item">
+              <h3>❓ Posso acessar pelo celular?</h3>
+              <p>
+                Sim. O sistema é totalmente responsivo.
+              </p>
+            </div>
+
+            <div className="faq-item">
+              <h3>❓ Posso cancelar quando quiser?</h3>
+              <p>
+                Sim. Você pode interromper o uso a qualquer momento.
+              </p>
+            </div>
+
+          </div>
+
+          <div className="guarantee-card">
+            <div className="guarantee-icon">
+              🛡️
+            </div>
+
+            <div>
+              <h3>Garantia de Satisfação</h3>
+
+              <p>
+                Caso a solução não atenda suas expectativas,
+                oferecemos uma política de arrependimento
+                e reembolso em até {diasGarantia} dias após a contratação.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* Courses Preview */}
       <section className="courses">
         <div className="container">
@@ -276,6 +409,54 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* developers Section */}
+
+      <section className="developers">
+        <div className="container">
+
+          <div className="section-title">
+            <h2>Quem Desenvolveu Este Projeto?</h2>
+            <p>
+              Trabalho desenvolvido para a disciplina de Desenvolvimento Web.
+            </p>
+          </div>
+
+          <div className="developers-grid">
+
+            <div className="developer-card">
+              <img src={josef} alt="Josef" />
+
+              <h3>Josef Ferreira Melcher</h3>
+
+              <p className="course">
+                🎓 Tecnologia em Sistemas para Internet
+              </p>
+
+              <span className="role">
+                DESENVOLVEDOR FRONTEND E BACKEND
+              </span>
+            </div>
+
+            <div className="developer-card">
+              <img src={george} alt="George" />
+
+              <h3>George Lucas Goulart de Oliveira</h3>
+
+              <p className="course">
+                🎓 Tecnologia em Sistemas para Internet
+              </p>
+
+              <span className="role">
+                DESENVOLVEDOR FRONTEND E BACKEND
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+      <WhatsAppButton />
     </>
   );
 };
