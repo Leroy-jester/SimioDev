@@ -1,3 +1,11 @@
+<<<<<<< Updated upstream
+=======
+import CSS3 from '../assets/CSS3.png'
+import HTML5 from '../assets/HTML5.png'
+import JS from '../assets/javascript.png'
+import fullstack from '../assets/FullStack2.png'
+import './cursos.css'
+>>>>>>> Stashed changes
 const Cursos = () => {
   return (
     <>
@@ -10,7 +18,11 @@ const Cursos = () => {
           <div className="course-slider">
             <div className="course-card">
               <div className="course-image">
+<<<<<<< Updated upstream
                 <img src="https://via.placeholder.com/400x200?fullstack" alt="Curso Completo" />
+=======
+                <img src={fullstack} alt="Curso Completo" />
+>>>>>>> Stashed changes
               </div>
               <div className="course-content">
                 <h3>Curso Completo: HTML, CSS e JavaScript</h3>
@@ -25,7 +37,11 @@ const Cursos = () => {
             {/* Apenas HTML */}
             <div className="course-card">
               <div className="course-image">
+<<<<<<< Updated upstream
                 <img src="https://via.placeholder.com/400x200?html5" alt="Curso de HTML" />
+=======
+                <img src={HTML5} alt="Curso de HTML" />
+>>>>>>> Stashed changes
               </div>
               <div className="course-content">
                 <h3>Curso de HTML5</h3>
@@ -40,7 +56,11 @@ const Cursos = () => {
             {/* Apenas CSS */}
             <div className="course-card">
               <div className="course-image">
+<<<<<<< Updated upstream
                 <img src="https://via.placeholder.com/400x200?css3" alt="Curso de CSS" />
+=======
+                <img src={CSS3} alt="Curso de CSS" />
+>>>>>>> Stashed changes
               </div>
               <div className="course-content">
                 <h3>Curso de CSS3 Avançado</h3>
@@ -54,7 +74,11 @@ const Cursos = () => {
 
             <div className="course-card">
               <div className="course-image">
+<<<<<<< Updated upstream
                 <img src="https://via.placeholder.com/400x200?javascript" alt="Curso de JavaScript" />
+=======
+                <img src={JS} alt="Curso de JavaScript" />
+>>>>>>> Stashed changes
               </div>
               <div className="course-content">
                 <h3>Curso de JavaScript Moderno</h3>

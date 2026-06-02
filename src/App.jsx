@@ -5,6 +5,10 @@ import Cursos from './pages/Cursos';
 import Sobre from './pages/Sobre';
 import Contato from './pages/Contato';
 import './index.css';
+<<<<<<< Updated upstream
+=======
+import Footer from './components/Footer';
+>>>>>>> Stashed changes
 
 function App() {
   return (
@@ -19,6 +23,10 @@ function App() {
             <Route path="/contato" element={<Contato />} />
           </Routes>
         </main>
+<<<<<<< Updated upstream
+=======
+        <Footer/>
+>>>>>>> Stashed changes
       </div>
     </Router>
   );
