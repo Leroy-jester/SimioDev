@@ -5,15 +5,8 @@ header {
   z-index: 1000;
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-sm);
-  border-bottom: 1px solid var(--gray-light);
-}
-
-nav {
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  box-shadow: var();
+  border-bottom: 1px solid var();
 }
 
 .logo {
@@ -22,7 +15,7 @@ nav {
   gap: 0.75rem;
   font-size: 1.8rem;
   font-weight: 800;
-  background: var(--gradient-primary);
+  background: var();
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -31,46 +24,13 @@ nav {
 .logo-icon {
   width: 28px;
   height: 28px;
-  background: var(--gradient-primary);
+  background: var();
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 1.2rem;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-.nav-links a {
-  color: var(--gray-dark);
-  font-weight: 500;
-  position: relative;
-  padding: 0.5rem 0;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--gradient-primary);
-  transition: var(--transition);
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-.nav-links .btn-primary {
-  padding: 0.75rem 1.5rem;
-  font-size: 0.95rem;
 }
 
 .hero {
@@ -332,6 +292,7 @@ nav {
 
 .course-footer {
   margin-top: auto;
+  padding: 10px;
   padding-top: 1.5rem;
   border-top: 1px solid #e9ecef;
   display: flex;
@@ -350,4 +311,194 @@ nav {
 .course-btn {
   padding: 0.75rem 1.5rem;
   font-size: 0.9rem;
+}
+
+.steps {
+  padding: 5rem 0;
+  background: rgb(234, 234, 234);
+}
+
+.steps-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.step-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.step-card .feature-card {
+  width: 280px;
+}
+
+.step-arrow {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4361ee;
+}
+
+.CanDo {
+  padding: 5rem 0;
+  background: #f8f9fa;
+}
+
+.CanDo-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.CanDo-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+  min-height: 120px;
+}
+
+.CanDo-card:hover {
+  transform: translateY(-4px);
+  border-color: #4361ee;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.CanDo-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #22c55e;
+  border-radius: 50%;
+
+  color: white;
+  font-size: 1.5rem;
+
+  flex-shrink: 0;
+}
+
+.CanDo-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212529;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Centraliza o 5º card */
+.CanDo-card:last-child {
+  grid-column: 1 / span 2;
+  max-width: 50%;
+  justify-self: center;
+}
+
+.testimonials {
+  padding: 5rem 0;
+  background: white;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: #4361ee;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-stars {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card p {
+  color: #6c757d;
+  line-height: 1.7;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-user {
+  border-top: 1px solid #e9ecef;
+  padding-top: 1rem;
+}
+
+.testimonial-user strong {
+  display: block;
+  color: #212529;
+  font-size: 1rem;
+}
+
+.testimonial-user span {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .CanDo-box {
+    grid-template-columns: 1fr;
+  }
+
+  .CanDo-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
+  }
+}
+
+/* Celular */
+@media (max-width: 480px) {
+  .CanDo-card {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .steps-grid {
+    flex-direction: column;
+  }
+
+  .step-card {
+    flex-direction: column;
+  }
+
+  .step-arrow {
+    transform: rotate(90deg);
+  }
 }
