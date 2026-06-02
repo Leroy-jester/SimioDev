@@ -23,14 +23,6 @@ const Home = () => {
     setVideoFinished(true)
   }
 
-  const replayVideo = () => {
-    setVideoFinished(false)
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-  }
-
   if (!videoFinished) {
     return (       
       <section className="hero">
@@ -75,7 +67,7 @@ const Home = () => {
           <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-          <div className='hero-video'>
+          <div className='hero-video-lock'>
             <video
               controls
               controlsList="nodownload noplaybackrate nofullscreen"
@@ -93,12 +85,6 @@ const Home = () => {
               Saiba Mais
             </a>
 
-            <button
-              className="btn btn-outline"
-              onClick={replayVideo}
-            >
-              🎥 Ver Vídeo Novamente
-            </button>
           </div>
         </div>
       </section>
