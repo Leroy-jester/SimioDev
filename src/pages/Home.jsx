@@ -10,8 +10,7 @@ import videoApresentacao from '../assets/vedeo.mp4'
 const Home = () => {
 
   const [diasGarantia, setDiasGarantia] = useState(7)
-  const [videoStarted, setVideoStarted] = useState(false);
-  const [videoFinished, setVideoFinished] = useState(false);
+  const [videoFinished, setVideoFinished] = useState(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,42 +19,64 @@ const Home = () => {
 
     return () => clearInterval(interval)
   }, [])
-  
-  // useEffect(() => {
-  // document.body.style.overflow = videoFinished ? 'auto' : 'hidden'
 
-  // return () => {
-  //   document.body.style.overflow = 'auto'
-  // }
-  // }, [videoFinished])
+  useEffect(() => {
+    document.body.style.overflow = videoFinished ? 'auto' : 'hidden'
+
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  }, [videoFinished])
+
+  // Função para testes
+  const skipVideo = () => {
+    setVideoFinished(true)
+  }
+
+  if (!videoFinished) {
+    return (
+      <section className="hero">
+        <div className="video-container">
+
+          <h2>Assista ao vídeo para continuar</h2>
+
+          <video
+            autoPlay
+            controls={false}
+            disablePictureInPicture
+            controlsList="nodownload noplaybackrate nofullscreen"
+            onEnded={() => setVideoFinished(true)}
+            onContextMenu={(e) => e.preventDefault()}
+          >
+            <source src={videoApresentacao} type="video/mp4" />
+          </video>
+
+          {/* BOTÃO APENAS PARA TESTES */}
+          <button className="skip-video-btn" onClick={skipVideo}>
+            ⏭️ Pular vídeo (teste)
+          </button>
+
+        </div>
+      </section>
+    )
+  }
 
   return (
     <>
-
-      {videoStarted && !videoFinished && (
-        <div className="page-lock">
-          <div className="lock-message">
-            <h2>Assista ao vídeo até o final</h2>
-            <p>O restante do conteúdo será liberado automaticamente.</p>
-          </div>
-        </div>
-      )}
-
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
           <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <video
-            controls
-            onPlay={() => setVideoStarted(true)}
-            onEnded={() => setVideoFinished(true)}
-          >
-            <source src={videoApresentacao} type="video/mp4" />
-          </video>
+
           <div className="hero-buttons">
-            <a href="/" className="btn btn-primary">Começar Agora</a>
-            <a href="/" className="btn btn-outline">Saiba Mais</a>
+            <a href="/" className="btn btn-primary">
+              Começar Agora
+            </a>
+
+            <a href="/" className="btn btn-outline">
+              Saiba Mais
+            </a>
           </div>
         </div>
       </section>
