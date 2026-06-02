@@ -3,25 +3,15 @@ import './home.css'
 import STOCKIMAGE from '../assets/stockImage.jpg'
 import josef from '../assets/josef.png'
 import george from '../assets/george.jpg'
-import { YoutubeVideo } from '../components/Youtube'
 import { WhatsAppButton } from '../components/Whatssap'
-import videoApresentacao from '../assets/vedeo.mp4'
+import videoApresentacao from '../assets/'
 
 const Home = () => {
 
-  const [diasGarantia, setDiasGarantia] = useState(7)
   const [videoFinished, setVideoFinished] = useState(false)
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setDiasGarantia((dias) => dias + 1)
-    }, 1000)
-
-    return () => clearInterval(interval)
-  }, [])
-
-  useEffect(() => {
-    document.body.style.overflow = videoFinished ? 'auto' : 'hidden'
+    document.body.style.overflow = videoFinished ? 'auto' : ''
 
     return () => {
       document.body.style.overflow = 'auto'
@@ -33,31 +23,47 @@ const Home = () => {
     setVideoFinished(true)
   }
 
+  const replayVideo = () => {
+    setVideoFinished(false)
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   if (!videoFinished) {
-    return (
+    return (       
       <section className="hero">
-        <div className="video-container">
+        <div className="hero-content"> 
+          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-          <h2>Assista ao vídeo para continuar</h2>
+          <div className='hero-video-lock'>
+            <video
+              autoPlay
+              controls={false}
+              disablePictureInPicture
+              controlsList="nodownload noplaybackrate nofullscreen"
+              onEnded={() => setVideoFinished(true)}
+              onContextMenu={(e) => e.preventDefault()}
+            >
+              <source src={videoApresentacao} type="video/mp4" />
+            </video>
+          </div>
+          
 
-          <video
-            autoPlay
-            controls={false}
-            disablePictureInPicture
-            controlsList="nodownload noplaybackrate nofullscreen"
-            onEnded={() => setVideoFinished(true)}
-            onContextMenu={(e) => e.preventDefault()}
-          >
-            <source src={videoApresentacao} type="video/mp4" />
-          </video>
+          <div className="hero-buttons">
+            {/* BOTÃO APENAS PARA TESTES */}
+          
+          </div>
+        </div>
 
-          {/* BOTÃO APENAS PARA TESTES */}
-          <button className="skip-video-btn" onClick={skipVideo}>
+        <button className="skip-video-btn" onClick={skipVideo}>
             ⏭️ Pular vídeo (teste)
           </button>
-
-        </div>
       </section>
+
+      
     )
   }
 
@@ -69,6 +75,15 @@ const Home = () => {
           <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
+          <div className='hero-video'>
+            <video
+              controls
+              controlsList="nodownload noplaybackrate nofullscreen"
+            >
+              <source src={videoApresentacao} type="video/mp4" />
+            </video>
+          </div>
+
           <div className="hero-buttons">
             <a href="/" className="btn btn-primary">
               Começar Agora
@@ -77,6 +92,13 @@ const Home = () => {
             <a href="/" className="btn btn-outline">
               Saiba Mais
             </a>
+
+            <button
+              className="btn btn-outline"
+              onClick={replayVideo}
+            >
+              🎥 Ver Vídeo Novamente
+            </button>
           </div>
         </div>
       </section>
@@ -352,7 +374,7 @@ const Home = () => {
               <p>
                 Caso a solução não atenda suas expectativas,
                 oferecemos uma política de arrependimento
-                e reembolso em até {diasGarantia} dias após a contratação.
+                e reembolso em até 7 dias após a contratação.
               </p>
             </div>
           </div>
